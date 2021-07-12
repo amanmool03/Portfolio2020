@@ -1,0 +1,104 @@
+.container{
+    
+    height: 100vh;
+   	width: 100%;
+    margin:  0 auto;
+    display: none;
+}
+
+h1{
+    color: white;
+}
+
+.right{
+	z-index: 11;
+	position: fixed;
+	left: auto;
+	right: 40px;
+	width: 40px;
+	bottom: 0;
+}
+
+.left{
+	z-index: 11;
+	position: fixed;
+	right: auto;
+	left: 40px;
+	width: 40px;
+	bottom: 0;
+}
+
+
+.right .email{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.email a{
+	color: white;
+	margin: 20px auto;
+	letter-spacing: 0.25em;
+	writing-mode: vertical-rl;
+	text-decoration: none;
+	font-size: var(--tz-sm);
+	font-family: monospace;
+	transition: 0.3s ease ;
+}
+.line::after{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 90px;
+	margin: 0px auto;
+	background-color: var(--light-slate);
+}
+
+.email:hover a{
+	transform:translateY(-10px); 
+	color: var(--logoFill);
+
+}
+
+.left .social{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+.left ul{
+	list-style: none;
+	margin: 20px auto;
+}
+.left ul li{
+	margin-bottom: 30px;
+	transition: 0.3s ease ;
+}
+.left ul li a{
+	color: var(--light-slate);
+	font-size: var(--fz-xl);
+}
+
+.left ul li:hover{
+	transform: translateY(-3px);
+
+}
+.left ul li:hover a{
+	color: var(--logoFill);
+
+}
+
+
+
+@media (max-width: 760px){
+
+.left,.right{
+	display: none;
+}
+
+
+
+}

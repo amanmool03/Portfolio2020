@@ -1,0 +1,97 @@
+.intro {
+   height: 100vh;
+   width: 100%;
+   background-color: var(--introBG);
+   z-index: 13;
+   position: absolute;
+   animation: remove 0.2s ease-in-out forwards;
+   animation-delay: 3s;
+   pointer-events: none;
+   overflow: hidden;
+
+}
+
+.intro #logo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 100px;
+   animation: fill 2s ease forwards;
+   animation-delay: 1.65s;
+
+}
+
+#logo path {
+   stroke: var(--logoStroke);
+   stroke-dasharray: 600px;
+   stroke-dashoffset: 600px;
+   animation: lineAnimation 3s ease forwards;
+}
+
+@keyframes lineAnimation {
+   to {
+      stroke-dashoffset: 0;
+   }
+}
+
+@keyframes fill {
+   0% {
+      transform: translate(-50%, -50%) scale(1);
+      fill: transparent;
+   }
+
+   10% {
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+   20% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+   30% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+   40% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+   50% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+   60% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(0);
+   }
+
+   70% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(0);
+   }
+
+   80% {
+      fill: var(--logoFill);
+      transform: translate(-50%, -50%) scale(0);
+   }
+
+   100% {
+      transform: translate(-50%, -50%) scale(0);
+      fill: var(--logoFill);
+   }
+}
+
+@keyframes remove {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+   }
+}
